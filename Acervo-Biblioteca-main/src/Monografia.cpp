@@ -28,9 +28,18 @@
 	}
 	
 	
-	void Monografia::imprimirBiblioteca(){
-		TrabalhoDeConclusao::imprimirBiblioteca();
-		
-		cout << "Curso: " << getCurso() << endl;
-		cout << "Conclus�o: " << getConclusao() << endl;
-	}
+void Monografia::imprimirBiblioteca() {
+    TrabalhoDeConclusao::imprimirBiblioteca();
+
+    // Imprimir borda superior
+    cout << "+-------------------------------+" << endl;
+
+    // Imprimir informações da monografia
+    cout << "| Curso: " << getCurso();
+    cout << string(30 - getCurso().length(), ' ') << "|" << endl;
+    cout << "| Conclusão: " << getConclusao();
+    cout << string(26 - getConclusao().length(), ' ') << "|" << endl;
+
+    // Imprimir borda inferior
+    cout << "+-------------------------------+" << endl;
+}

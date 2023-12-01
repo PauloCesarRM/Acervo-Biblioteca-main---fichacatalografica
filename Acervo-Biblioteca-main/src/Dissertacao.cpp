@@ -27,9 +27,18 @@
         this->metodologia = metodologia;
     }
 
-	void Dissertacao::imprimirBiblioteca(){
+	void Dissertacao::imprimirBiblioteca() {
 		TrabalhoDeConclusao::imprimirBiblioteca();
-		
-		cout << "Departamento: " << getDepartamento() << endl;
-		cout << "Metodologia: " << getMetodologia() << endl;
+
+		// Imprimir borda superior
+		cout << "+---------------------------------------+" << endl;
+
+		// Imprimir informações da dissertação
+		cout << "| Departamento: " << getDepartamento();
+		cout << string(30 - getDepartamento().length(), ' ') << "|" << endl;
+		cout << "| Metodologia: " << getMetodologia();
+		cout << string(30 - getMetodologia().length(), ' ') << "|" << endl;
+
+		// Imprimir borda inferior
+		cout << "+---------------------------------------+" << endl;
 	}

@@ -21,8 +21,16 @@
     }
 
     
-    void Cartaz::imprimirBiblioteca(){
-        Biblioteca::imprimirBiblioteca();
+void Cartaz::imprimirBiblioteca() {
+    Biblioteca::imprimirBiblioteca();
 
-        cout << "Dimensao: " << getDimensao() << endl;
-    }
+    // Imprimir borda superior
+    cout << "+---------------------+" << endl;
+
+    // Imprimir informações do cartaz
+    cout << "| Dimensão: " << getDimensao();
+    cout << string(17 - getDimensao().length(), ' ') << "|" << endl;
+
+    // Imprimir borda inferior
+    cout << "+---------------------+" << endl;
+}

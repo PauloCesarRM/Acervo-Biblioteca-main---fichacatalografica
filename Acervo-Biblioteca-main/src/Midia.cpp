@@ -30,9 +30,18 @@
     }
     
 
-    void Midia::imprimirBiblioteca(){
-        Biblioteca::imprimirBiblioteca();
-        
-        cout << "Duracao: " << getDuracao() << endl;
-        cout << "Idioma: " << getIdioma() << endl;
-    }
+void Midia::imprimirBiblioteca() {
+    Biblioteca::imprimirBiblioteca();
+
+    // Imprimir borda superior
+    cout << "+---------------------------+" << endl;
+
+    // Imprimir informações da mídia
+    cout << "| Duração: " << getDuracao();
+    cout << string(24 - getDuracao().length(), ' ') << "|" << endl;
+    cout << "| Idioma: " << getIdioma();
+    cout << string(25 - getIdioma().length(), ' ') << "|" << endl;
+
+    // Imprimir borda inferior
+    cout << "+---------------------------+" << endl;
+}
